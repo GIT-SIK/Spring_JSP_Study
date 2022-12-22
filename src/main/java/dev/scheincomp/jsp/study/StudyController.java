@@ -1,6 +1,5 @@
 package dev.scheincomp.jsp.study;
 
-import dev.scheincomp.jsp.index.IndexDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -11,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping(path ="/study")
 public class StudyController {
     @Autowired
-    private IndexDao indexDao;
+    private StudyDao studyDao;
     @GetMapping("/1")
     public String Study1(){
         return "study/s1";
@@ -19,15 +18,15 @@ public class StudyController {
 
     @GetMapping("/2")
     public String Study2(Model model){
-        System.out.println(indexDao.getIndex());
-        model.addAttribute("data", indexDao.getIndex());
+        System.out.println(studyDao.getData());
+        model.addAttribute("data", studyDao.getData());
         return "study/s2";
     }
 
     @GetMapping("/3")
     public String Study3(Model model){
-        System.out.println(indexDao.getListIndex());
-        model.addAttribute("dataList", indexDao.getListIndex());
+        System.out.println(studyDao.getListData());
+        model.addAttribute("dataList", studyDao.getListData());
         return "study/s3";
     }
 }
