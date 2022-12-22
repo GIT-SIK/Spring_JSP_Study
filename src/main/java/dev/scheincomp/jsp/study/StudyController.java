@@ -1,13 +1,15 @@
 package dev.scheincomp.jsp.study;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.cassandra.CassandraProperties;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.HashMap;
 
 @Controller
-@RequestMapping(path ="/study")
+@RequestMapping(path ="/study/*")
 public class StudyController {
     @Autowired
     private StudyDao studyDao;
@@ -29,4 +31,30 @@ public class StudyController {
         model.addAttribute("dataList", studyDao.getListData());
         return "study/s3";
     }
+
+    @GetMapping("/4")
+    public String Study4(Model model){
+        return "study/s4";
+    }
+
+
+    @PostMapping ("/insert")
+    public String insert1(
+            @RequestParam("hide_1") String hide_1,
+            @RequestParam("hide_2") String hide_2,
+            @RequestParam("hide_3") String hide_3,
+            @RequestParam("hide_4") String hide_4,
+            @RequestParam("data_1") String data_1  ){
+            System.out.println(hide_1 + " / " + hide_2  + " / " + hide_3 + " / " + hide_4  + " / " + data_1);
+        return "study/s4";
+    }
+
+/*
+    @PostMapping ("/insert")
+    public void insert1(  @RequestBody HashMap<String, Object> map  ){
+        System.out.println(map.get("hide_1"));
+//        return "study/s4";
+    }
+*/
+
 }
