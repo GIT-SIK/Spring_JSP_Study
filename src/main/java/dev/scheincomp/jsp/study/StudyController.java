@@ -20,8 +20,14 @@ public class StudyController {
     @GetMapping("/2")
     public String Study2(Model model){
         System.out.println(indexDao.getIndex());
-
         model.addAttribute("data", indexDao.getIndex());
         return "study/s2";
+    }
+
+    @GetMapping("/3")
+    public String Study3(Model model){
+        System.out.println(indexDao.getListIndex());
+        model.addAttribute("dataList", indexDao.getListIndex());
+        return "study/s3";
     }
 }
