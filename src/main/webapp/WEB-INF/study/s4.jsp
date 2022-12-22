@@ -4,13 +4,9 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title> S3 - JSTL/LIST </title>
+    <title> S4 </title>
 </head>
 <body>
-<c:forEach var="dataVO" items="${dataList}" varStatus="status" >
-    ${status.count} / ${dataVO.num} : ${dataVO.date_1}
-    <br>
-</c:forEach>
 
 </body>
 </html>

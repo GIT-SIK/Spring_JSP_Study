@@ -5,7 +5,7 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title> S1 </title>
+    <title> S1 - 기본 </title>
 </head>
 <body>
 

@@ -5,7 +5,7 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title> S2 </title>
+    <title> S2 - Object/JSON</title>
 </head>
 <body>
 <script>
