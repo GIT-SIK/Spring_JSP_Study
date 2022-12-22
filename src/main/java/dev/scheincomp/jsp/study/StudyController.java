@@ -37,8 +37,8 @@ public class StudyController {
         return "study/s4";
     }
 
-
-    @PostMapping ("/insert")
+    /* 일반 타입으로 받기 */
+    @PostMapping ("/insert/p")
     public String insert1(
             @RequestParam("hide_1") String hide_1,
             @RequestParam("hide_2") String hide_2,
@@ -49,12 +49,12 @@ public class StudyController {
         return "study/s4";
     }
 
-/*
-    @PostMapping ("/insert")
-    public void insert1(  @RequestBody HashMap<String, Object> map  ){
-        System.out.println(map.get("hide_1"));
-//        return "study/s4";
+    /* JSON 타입 -> Map으로 받기 */
+    @PostMapping ("/insert/j")
+    public String insert1(  @RequestBody HashMap<String, Object> map  ){
+        System.out.println(map.get("hide_1") + " / " + map.get("hide_2")  + " / " + map.get("hide_3") + " / " + map.get("hide_4")  + " / " + map.get("data_1"));
+        return "study/s4";
     }
-*/
+
 
 }
