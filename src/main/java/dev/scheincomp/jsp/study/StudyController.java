@@ -50,9 +50,19 @@ public class StudyController {
     }
 
     /* JSON 타입 -> Map으로 받기 */
+    /* insert */
+    /* Object -> bool & String */
     @PostMapping ("/insert/j")
     public String insert1(  @RequestBody HashMap<String, Object> map  ){
         System.out.println(map.get("hide_1") + " / " + map.get("hide_2")  + " / " + map.get("hide_3") + " / " + map.get("hide_4")  + " / " + map.get("data_1"));
+        StudyVO studyVO = new StudyVO();
+        studyVO.setHide_1((boolean)map.get("hide_1"));
+        studyVO.setHide_2((boolean)map.get("hide_2"));
+        studyVO.setHide_3((boolean)map.get("hide_3"));
+        studyVO.setData_1((String)map.get("data_1"));
+
+        studyDao.insertData(studyVO);
+
         return "study/s4";
     }
 

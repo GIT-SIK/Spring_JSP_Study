@@ -10,4 +10,6 @@ public interface StudyDao {
 
     public StudyVO getData();
     public List<StudyVO> getListData();
+
+    public int insertData(StudyVO studyVO);
 }
