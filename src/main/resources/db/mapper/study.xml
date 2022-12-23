@@ -14,4 +14,9 @@
         select num, hide_1, hide_2, hide_3, date_1, data_1 from view;
     </select>
 
+
+    <insert id="insertData" parameterType="dev.scheincomp.jsp.study.StudyVO">
+        INSERT INTO view(hide_1, hide_2, hide_3, data_1, date_1)
+        VALUES (#{hide_1}, #{hide_2}, #{hide_3}, #{data_1},now())
+    </insert>
 </mapper>
