@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybaits.org/dtd/mybatis-3-mapper.dtd">
+<!-- ******************************* -->
+<mapper namespace="dev.scheincomp.jsp.user.UserMapper">
+
+    <!-- 반복되는 쿼리문 처리 -->
+    <sql id="selectUser">
+        select idx, nickname, local, info from user
+    </sql>
+
+    <select id="getAllUser" resultType="dev.scheincomp.jsp.user.UserVO">
+       <include refid="selectUser"></include>
+    </select>
+
+    <select id="findUserByNickname" resultType="dev.scheincomp.jsp.user.UserVO">
+        <include refid="selectUser"></include>
+        where nickname = #{value}
+    </select>
+
+</mapper>
