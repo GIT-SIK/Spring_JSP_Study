@@ -4,13 +4,14 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <link rel="stylesheet" href="${path}/five/css/footer.css">
+    <link rel="stylesheet" href="${path}/five/css/center.css">
 </head>
-<body>
- <footer>
- <div>
-     © FIVE. All rights reserved.
- </div>
- </footer>
-</body>
+    <body>
+        <div class="center-area-1">
+            AREA-1
+        </div>
+        <div class="center-area-2">
+            AREA-2
+        </div>
+    </body>
 </html>

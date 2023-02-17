@@ -1,11 +1,18 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<c:set var="path" value="${pageContext.request.contextPath}/resources"/>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-    <link rel="stylesheet" href="/five/css/header.css">
+    <link rel="stylesheet" href="${path}/five/css/header.css">
 </head>
-<body>
-TOP
-</body>
+ <header>
+     <div class="header-left">
+         <img src ="${path}/five/images/logo.png" alt="FIVE"/>
+     </div>
+     <div class="header-right">
+
+     </div>
+
+ </header>
 </html>

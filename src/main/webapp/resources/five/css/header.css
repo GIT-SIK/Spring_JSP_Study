@@ -1,0 +1,35 @@
+header {
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 767px) {
+    header {
+        justify-content: center;
+        height: 110px;
+    }
+
+    .header-left img { /* 10 : 3*/
+        width: 150px;
+        height: 45px;
+    }
+
+    .header-right {
+
+    }
+}
+
+@media (min-width: 768px) {
+    header {
+        height: 60px;
+    }
+
+    .header-left img {
+        width: 100px;
+        height: 30px;
+    }
+
+    .header-right {
+
+    }
+}

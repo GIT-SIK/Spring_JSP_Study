@@ -1,16 +1,21 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-<%@ page info="JSP FILE"%>
+<%@ page info="FIVE"%>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
     <title> FIVE </title>
+    <style>
+        body {
+            margin : 0;
+        }
+    </style>
 </head>
 <body>
-
-<%@ include file="Desktop/Back/BackProject/jsp/src/main/webapp/WEB-INF/jsp/five/header.jsp"%>
-<%=getServletInfo()%>
-<%@ include file="Desktop/Back/BackProject/jsp/src/main/webapp/WEB-INF/jsp/five/footer.jsp"%>
+<%@ include file="header.jsp"%>
+<%@ include file="center.jsp"%>
+<%@ include file="footer.jsp"%>
 
 </body>
 </html>

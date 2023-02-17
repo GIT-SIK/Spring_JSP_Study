@@ -16,6 +16,6 @@ public class IndexController
         System.out.println(indexDao.getIndex());
 
         model.addAttribute("data", indexDao.getIndex());
-        return "view/index";
+        return "five/index";
     }
 }
