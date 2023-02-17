@@ -3,8 +3,9 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <meta charset="UTF-8">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="/all/login.css">
     <title> LOGIN </title>
 </head>
 <body>
