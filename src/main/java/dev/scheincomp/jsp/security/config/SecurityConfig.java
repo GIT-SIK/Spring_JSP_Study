@@ -24,8 +24,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .maxSessionsPreventsLogin(true); // 동시로그인 방지 / false -> 세션만료
 
         http.authorizeRequests()
-                .antMatchers("/").permitAll()// '/'만 모든 접근가능
-               .anyRequest().authenticated() // '/' 제외한 모든 경로 인증필수
+                .antMatchers("/**").permitAll()// '/'만 모든 접근가능
+                .anyRequest().authenticated() // '/' 제외한 모든 경로 인증필수
                 .and()
                 .formLogin(); // 인증필요시 로그인폼 ( 기본 시큐리티 폼 )
     }
