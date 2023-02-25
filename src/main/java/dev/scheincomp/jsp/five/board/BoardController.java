@@ -24,12 +24,14 @@ public class BoardController {
         List<BoardVO> list = boardMapper.getBoardList();
         model.addAttribute("list", list);
 
-        return "five/board/board";
+        return "five/board/boardList";
     }
 
     // 게시판 조회 //
     @GetMapping("/{b_no}")
-    public void boardView(@PathVariable("b_no") int bno) {
-
+    public String boardView(@PathVariable("b_no") int bNo, Model model) throws Exception {
+        BoardVO board = boardMapper.getBoard(bNo);
+        model.addAttribute("board",board);
+        return "five/board/board";
     }
 }

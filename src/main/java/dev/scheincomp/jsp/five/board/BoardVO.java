@@ -9,6 +9,7 @@ import java.util.Date;
 public class BoardVO {
     int b_no;
     String b_title;
+    String b_content;
     String b_id;
     Date b_date;
     int b_cnt;

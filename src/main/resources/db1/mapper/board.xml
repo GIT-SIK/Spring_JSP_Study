@@ -5,9 +5,16 @@
 <!-- ******************************* -->
 <mapper namespace="dev.scheincomp.jsp.five.board.BoardMapper">
 
+    <sql id="selectBoard">
+        select b_no, b_title, b_content, b_id, b_date, b_cnt from board
+    </sql>
     <!--List -->
     <select id="getBoardList" resultType="dev.scheincomp.jsp.five.board.BoardVO">
-        select b_no, b_title, b_id, b_date, b_cnt from board;
+        <include refid="selectBoard"></include>
     </select>
 
+    <select id="getBoard" resultType="dev.scheincomp.jsp.five.board.BoardVO">
+        <include refid="selectBoard"></include>
+        where b_no = #{value};
+    </select>
 </mapper>
