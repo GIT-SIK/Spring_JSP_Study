@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybaits.org/dtd/mybatis-3-mapper.dtd">
+<!-- ******************************* -->
+<mapper namespace="dev.scheincomp.jsp.five.board.BoardMapper">
+
+    <!--List -->
+    <select id="getBoardList" resultType="dev.scheincomp.jsp.five.board.BoardVO">
+        select b_no, b_title, b_id, b_date, b_cnt from board;
+    </select>
+
+</mapper>
