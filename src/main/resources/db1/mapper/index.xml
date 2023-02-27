@@ -5,9 +5,9 @@
 <!-- ******************************* -->
 <mapper namespace="dev.scheincomp.jsp.five.index.IndexMapper">
 
-
-    <select id="getBoardList" resultType="dev.scheincomp.jsp.five.index.IndexVO">
-        select i_no from index
+    <!-- index 예약어 `` 처리 -->
+    <select id="getData" resultType="dev.scheincomp.jsp.five.index.IndexVO">
+        select i_no from `index` where i_no=1;
     </select>
 
 </mapper>
