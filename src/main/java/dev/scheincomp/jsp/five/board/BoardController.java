@@ -21,8 +21,8 @@ public class BoardController {
     @GetMapping("/")
     public String boardList(Model model) throws Exception{
 
-        List<BoardVO> list = boardMapper.getBoardList();
-        model.addAttribute("list", list);
+        List<BoardVO> boardList = boardMapper.getBoardList();
+        model.addAttribute("boardList", boardList);
 
         return "five/board/boardList";
     }
@@ -30,6 +30,7 @@ public class BoardController {
     // 게시판 조회 //
     @GetMapping("/{b_no}")
     public String boardView(@PathVariable("b_no") int bNo, Model model) throws Exception {
+        
         BoardVO board = boardMapper.getBoard(bNo);
         model.addAttribute("board",board);
         return "five/board/board";

@@ -20,7 +20,7 @@
         <th>작성날짜</th>
         <th>조회수</th>
     </tr>
-    <c:forEach var="board" items="${list}">
+    <c:forEach var="board" items="${boardList}">
         <tr>
             <td>${board.b_no}</td>
             <td><a href="/board/${board.b_no}">${board.b_title}</a></td>
